@@ -13,20 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dizzcode.com.lunchtray
+package dizzcode.com.lunchtray.model
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import dizzcode.com.lunchtray.ui.theme.LunchTrayTheme
-
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            LunchTrayTheme {
-                LunchTrayApp()
-            }
-        }
-    }
-}
+data class OrderUiState(
+    // Entree Selection
+    val entree: MenuItem.EntreeItem? = null,
+    val sideDish: MenuItem.SideDishItem? = null,
+    val accompaniment: MenuItem.AccompanimentItem? = null,
+    val itemTotalPrice: Double = 0.0,
+    val orderTax: Double = 0.0,
+    val orderTotalPrice: Double = 0.0
+)

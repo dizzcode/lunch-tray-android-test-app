@@ -15,5 +15,8 @@
   ~ limitations under the License.
   -->
 <resources>
-    <style name="Theme.LunchTray" parent="android:Theme.Material.Light.NoActionBar" />
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+
+    <dimen name="thickness_divider">1dp</dimen>
 </resources>
